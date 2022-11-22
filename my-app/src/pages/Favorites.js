@@ -1,5 +1,9 @@
-export default function Favorites() {
+import { Link } from "react-router-dom";
+
+ function Favorites() {
     return (
-      <h1>Favorites</h1>
+      <Link path="/favorites">Favorites</Link>
     );
   }
+
+  export default Favorites;
