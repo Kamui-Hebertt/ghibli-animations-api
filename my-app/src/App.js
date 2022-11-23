@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react';
+
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
-
-import FilmContext from './context/FilmContent';
 import { Switch ,Route } from 'react-router-dom';
+import { useEffect, useState} from 'react';
+import FilmContext from './context/FilmContent';
 
 
 
 function App() {
 
+  
   const [ inicialMovies , setResponse ] = useState([]);
   const [ InicialFavorite, setFavorite ]= useState([]);
 
@@ -24,25 +25,24 @@ function App() {
     },[]);
 
   const settingF = (elementId) => {
-    const DiferentItem = inicialMovies.some((element)=> element.id !== elementId);
-     console.log(DiferentItem)
+     console.log(elementId)
+    console.log(inicialMovies)
+  const a =  inicialMovies.find((e) => e.id  === elementId)
+setFavorite((prev)=>([...prev, a]));
 
-   //  console.log(setFavorite)
   }
-
 
   const contextObj = {
-    inicialMovies, InicialFavorite, settingF,
+      inicialMovies, InicialFavorite, settingF,
   }
+      
 
   return (
-    
-    <FilmContext.Provider value={ contextObj }>
+    <FilmContext.Provider value={contextObj}>
     <Switch>
-      
-      <Route exact path="/" component={ Home } />
-      <Route path="/favorites" component={ Favorites } />
-    </Switch>
+    <Route  exact path="/" component={ Home } />
+    <Route path="/favorites" component={ Favorites } />
+  </Switch>
   </FilmContext.Provider>
     
   );
