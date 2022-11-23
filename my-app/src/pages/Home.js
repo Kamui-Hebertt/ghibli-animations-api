@@ -9,6 +9,7 @@ export default function Home() {
     return (
   <div>
     <Header />
+    <h3 className="films">Films</h3>
     {inicialMovies.map((element,i)=> (
     <><h2 key={i}>{element.title}</h2>
     <img alt={element.title} src={element.image} />

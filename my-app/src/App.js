@@ -1,5 +1,6 @@
-
 import Home from './pages/Home';
+import '../src/Header.css';
+import '../src/App.css'
 import Favorites from './pages/Favorites';
 import { Switch ,Route } from 'react-router-dom';
 import { useEffect, useState} from 'react';
@@ -25,8 +26,8 @@ function App() {
     },[]);
 
   const settingF = (elementId) => {
-     console.log(elementId)
-    console.log(inicialMovies)
+     // console.log(elementId)
+   // console.log(inicialMovies)
   const a =  inicialMovies.find((e) => e.id  === elementId)
 setFavorite((prev)=>([...prev, a]));
 
