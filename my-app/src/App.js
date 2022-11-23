@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './pages/Home';
+import '../src/Header.css';
+import '../src/App.css'
+import Favorites from './pages/Favorites';
+import { Switch ,Route } from 'react-router-dom';
+import { useEffect, useState} from 'react';
+import FilmContext from './context/FilmContent';
+
+
 
 function App() {
+
+  
+  const [ inicialMovies , setResponse ] = useState([]);
+  const [ InicialFavorite, setFavorite ]= useState([]);
+
+  useEffect(()=> {
+    
+    fetch('https://ghibliapi.herokuapp.com/films')
+    .then(response => response.json())
+    .then(data => {
+      setResponse(data);
+      //  console.log(data);
+    
+    })
+    },[]);
+
+  const settingF = (elementId) => {
+     // console.log(elementId)
+   // console.log(inicialMovies)
+  const a =  inicialMovies.find((e) => e.id  === elementId)
+setFavorite((prev)=>([...prev, a]));
+
+  }
+
+  const contextObj = {
+      inicialMovies, InicialFavorite, settingF,
+  }
+      
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FilmContext.Provider value={contextObj}>
+    <Switch>
+    <Route  exact path="/" component={ Home } />
+    <Route path="/favorites" component={ Favorites } />
+  </Switch>
+  </FilmContext.Provider>
+    
   );
 }
 

@@ -1,0 +1,29 @@
+.headerD{
+width: 100%;
+height: 150px;
+left: 0px;
+top: 0px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+
+background: #007DF9;
+}
+
+.logo{
+    width: 250px;
+    
+    margin-left: 15px;
+}
+
+.favo {
+margin-right: 40px;
+fill: solid black;
+Font-family: Inter;
+Font-style: Regular;
+Font-size: 27px;
+Line-height: 33px;
+Line-height: 100%;
+
+}
