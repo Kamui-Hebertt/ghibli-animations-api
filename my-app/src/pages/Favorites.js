@@ -10,9 +10,9 @@ const {InicialFavorite }  = useContext(FilmContext)
     return (
       <div>
       <Header />
-      {InicialFavorite.map((e)=> (<><p key={e}>{e.title}</p>
-      <img src={e.image} alt={e.title} />
-      <p>{e.description}</p></>))}
+      {InicialFavorite.map((e)=> (<div><p key={e}>{e.title}</p>
+      <img  src={e.image} alt={e.title} />
+      <p>{e.description}</p></div>))}
       </div>
       )
      

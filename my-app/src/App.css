@@ -2,4 +2,56 @@ body  {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+
+}
+
+.bodyHome {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 250px;
+}
+
+.main { 
+     background-color: black;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+.films {background-color: black;
+color: aliceblue;}
+.filmsP {
+    display: flex;
+    justify-content: center;
+}
+
+.allMovies { 
+
+    
+    background-color: black;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.allMovies button {
+    width: 100px;
+    color: aliceblue;
+    background-color: #007DF9;
+    border-radius: 20px;
+    border-color: aliceblue;
+}
+.allMovies p{
+    border: 1px solid black;
+    width: 350px;
+    color: aliceblue;
+    
+}
+.allMovies img { 
+    width: 40%;
+    height: 40%;
 }
