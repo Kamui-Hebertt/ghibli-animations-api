@@ -9,13 +9,18 @@ export default function Home() {
     return (
   <div>
     <Header />
-    <h3 className="films">Films</h3>
+    <div className="films">
+    <h2 className="filmsP">Films</h2>
+    </div>
+    <main className="main">
     {inicialMovies.map((element,i)=> (
-    <><h2 key={i}>{element.title}</h2>
+    <div className="allMovies"><h3 key={i}>{element.title}</h3>
     <img alt={element.title} src={element.image} />
     <p>{element.description}</p>
-    <button type="button" onClick={() =>settingF(element.id)}>Add</button></>
+    <button type="button" onClick={() =>settingF(element.id)}>Add</button></div>
       ))}
+       </main>
     </div>
+   
     );
   }

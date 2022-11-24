@@ -1,0 +1,58 @@
+.main { 
+    background-color: black;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+body { background-color: black;}
+
+.films2 {border: 1px solid black;
+background-color: black;}
+
+.filmsP2 {
+   font-family: 'Single Day';
+   font-size: 45px;
+   color:aliceblue;
+   display: flex;
+   justify-content: center;
+   border: 1px solid black;
+   background-color: black;
+  
+}
+
+.allMovies2 { 
+
+   
+   background-color: black;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.allMovies2 button {
+   width: 100px;
+   color: aliceblue;
+   background-color: #007DF9;
+   border-radius: 20px;
+   border-color: aliceblue;
+}
+.allMovies2 h3 {
+    color: white;
+    font-family: 'Poppins';
+}
+.allMovies2 p{
+   border: 1px solid black;
+   width: 350px;
+   color: aliceblue;
+  font-family: 'Poppins';
+   
+}
+.allMovies2 img { 
+   width: 40%;
+   height: 40%;
+}
