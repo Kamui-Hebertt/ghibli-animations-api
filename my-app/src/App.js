@@ -1,6 +1,7 @@
 import Home from './pages/Home';
 import '../src/Header.css';
-import '../src/App.css'
+import '../src/App.css';
+import '../src/favorites.css';
 import Favorites from './pages/Favorites';
 import { Switch ,Route } from 'react-router-dom';
 import { useEffect, useState} from 'react';
